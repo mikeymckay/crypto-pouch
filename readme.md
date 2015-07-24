@@ -32,6 +32,22 @@ If you want to use it in the browser, download [the browserified version from wz
 <script src="pouchdb.crypto-pouch.js"></script>
 ```
 
+Or if you want to use browserify directly:
+
+```bash
+npm install crypto-pouch pouchdb
+```
+
+Then when requiring PouchDB and crypto-pouch, do it like this:
+```js
+window.PouchDB = require('pouchdb')
+require('crypto-pouch')
+
+db = window.PouchDB("my-db")
+db.crypto...
+```
+
+
 API
 --------
 
